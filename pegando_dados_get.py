@@ -1,3 +1,5 @@
+#adicionar inst.close() para fechar a comunicação visa
+
 from datetime import datetime
 import time
 
@@ -71,6 +73,9 @@ if FIM:
 
     
     def iniciar():
+        if ValueError:
+            mensagem["text"] = "Erro encontrado. Verifique os dados \n e as conexões com os equipamentos"
+
         global nome
         global ti
         global tf
@@ -96,12 +101,11 @@ print("\n\nIniciando\n\n")
 
 
 while True:
-  while True:
+  
     master = Tk()
     master.geometry("+300+200") 
     master.title("SAME")
 
-    a=1
     
     titulo = Label(master, text="Dados do processo", padx=30, pady=30)
     titulo["font"] = ("Consolas", "20", "bold")
@@ -109,7 +113,7 @@ while True:
 
     group1 = LabelFrame(master, text="Temperatura inicial", padx=30, pady=30)
     group1.grid(row=2, column=0)
-    w1 = Label(group1, text=a, padx=20, pady=20)
+    w1 = Label(group1, text="Alo", padx=20, pady=20)
     w1.pack()
 
 
@@ -141,12 +145,13 @@ while True:
     w6 = Label(group6, text="Alo", padx=20, pady=20)
     w6.pack()
 
-    a=a+1
+
     mainloop()
    
+    break
 
 
-print("\n\nIniciando\n\n")
+
 
 
 
